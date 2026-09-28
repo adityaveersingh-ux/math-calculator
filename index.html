@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Math Calculator</title>
+  <meta name="description" content="A fast scientific calculator with history, keyboard support, and degree/radian modes." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="calc" aria-label="Scientific calculator">
+    <header class="top">
+      <h1>Calculator</h1>
+      <div class="toggles">
+        <button id="angle" class="pill" type="button" aria-label="Toggle angle unit">DEG</button>
+        <button id="theme" class="pill" type="button" aria-label="Toggle theme">◐</button>
+      </div>
+    </header>
+
+    <section class="display" aria-live="polite">
+      <div id="expr" class="expr" aria-label="Expression"></div>
+      <div id="result" class="result" aria-label="Result">0</div>
+    </section>
+
+    <section class="keys" id="keys">
+      <button data-fn="sin(">sin</button>
+      <button data-fn="cos(">cos</button>
+      <button data-fn="tan(">tan</button>
+      <button data-fn="ln(">ln</button>
+      <button data-fn="log(">log</button>
+
+      <button data-fn="asin(">sin⁻¹</button>
+      <button data-fn="acos(">cos⁻¹</button>
+      <button data-fn="atan(">tan⁻¹</button>
+      <button data-fn="sqrt(">√</button>
+      <button data-in="^">xʸ</button>
+
+      <button data-in="π">π</button>
+      <button data-in="e">e</button>
+      <button data-in="!">n!</button>
+      <button data-in="(">(</button>
+      <button data-in=")">)</button>
+
+      <button class="num" data-in="7">7</button>
+      <button class="num" data-in="8">8</button>
+      <button class="num" data-in="9">9</button>
+      <button class="op" data-in="÷">÷</button>
+      <button class="danger" data-act="clear">AC</button>
+
+      <button class="num" data-in="4">4</button>
+      <button class="num" data-in="5">5</button>
+      <button class="num" data-in="6">6</button>
+      <button class="op" data-in="×">×</button>
+      <button class="danger" data-act="back">⌫</button>
+
+      <button class="num" data-in="1">1</button>
+      <button class="num" data-in="2">2</button>
+      <button class="num" data-in="3">3</button>
+      <button class="op" data-in="−">−</button>
+      <button data-in="%">%</button>
+
+      <button class="num" data-in="0">0</button>
+      <button class="num" data-in=".">.</button>
+      <button data-act="ans">Ans</button>
+      <button class="op" data-in="+">+</button>
+      <button class="eq" data-act="eq">=</button>
+    </section>
+
+    <section class="history">
+      <div class="history-head">
+        <h2>History</h2>
+        <button id="clear-history" class="link" type="button">Clear</button>
+      </div>
+      <ol id="history-list"></ol>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
